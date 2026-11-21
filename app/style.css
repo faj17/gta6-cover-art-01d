@@ -1,0 +1,89 @@
+/* Neon Coast — editor chrome. Dark violet UI with sunset-pink accents. */
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  background: #0d0518;
+  color: #f5efff;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+}
+.top {
+  padding: 20px 28px 8px;
+  background: linear-gradient(90deg, #ff9a3c, #ff2e63 55%, #7b2ff7);
+}
+.top h1 {
+  margin: 0;
+  font-family: "Arial Black", Impact, sans-serif;
+  font-style: italic;
+  font-size: 40px;
+  letter-spacing: 2px;
+  color: #fff;
+  text-shadow: 3px 3px 0 #12041f;
+}
+.tagline { margin: 4px 0 10px; color: #ffe9f2; font-size: 15px; }
+.app {
+  display: grid;
+  grid-template-columns: 380px 1fr;
+  gap: 24px;
+  padding: 20px 28px;
+  align-items: start;
+}
+.controls h2 { font-size: 15px; text-transform: uppercase; letter-spacing: 1px; color: #ff9a3c; margin: 18px 0 8px; }
+.hint { font-size: 13px; color: #c9b8e8; margin: 4px 0 10px; }
+.picker { display: flex; flex-wrap: wrap; gap: 8px; }
+.picker button, .secondary, .primary {
+  font: inherit;
+  cursor: pointer;
+  border: 1px solid #5b3a8c;
+  background: #1c0f33;
+  color: #f5efff;
+  border-radius: 8px;
+  padding: 8px 12px;
+}
+.picker button.picked { background: #ff2e63; border-color: #ff2e63; color: #fff; font-weight: 700; }
+.primary {
+  display: block;
+  width: 100%;
+  margin-top: 14px;
+  padding: 13px;
+  font-size: 17px;
+  font-weight: 800;
+  background: linear-gradient(90deg, #ff9a3c, #ff2e63);
+  border: none;
+}
+.secondary { margin-top: 8px; }
+label { display: block; font-size: 13px; margin: 8px 0; }
+label input[type="text"] {
+  display: block;
+  width: 100%;
+  margin-top: 4px;
+  padding: 9px;
+  font: inherit;
+  color: #12041f;
+  border: none;
+  border-radius: 6px;
+}
+label input[type="range"] { width: 100%; accent-color: #ff2e63; }
+.panel-card {
+  border: 1px solid #3a2361;
+  border-radius: 10px;
+  padding: 10px 12px;
+  margin-bottom: 10px;
+  background: #150a28;
+}
+.panel-card h3 { margin: 0 0 4px; font-size: 14px; color: #00e5ff; }
+#status { font-size: 13px; color: #ffd166; min-height: 18px; }
+.preview-wrap { position: sticky; top: 16px; }
+#preview {
+  width: 100%;
+  max-width: 780px;
+  height: auto;
+  display: block;
+  border: 3px solid #ff2e63;
+  border-radius: 6px;
+  background: #000;
+}
+.foot { padding: 0 28px 24px; font-size: 12px; color: #8f7bb8; }
+@media (max-width: 900px) {
+  .app { grid-template-columns: 1fr; }
+  .preview-wrap { position: static; }
+}
